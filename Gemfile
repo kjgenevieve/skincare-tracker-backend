@@ -43,3 +43,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_model_serializers'
 gem 'mechanize'
 gem 'pry'
+# gem 'filterrific'
+gem 'pg_search'
