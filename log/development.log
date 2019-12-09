@@ -23225,3 +23225,414 @@ Processing by ProductsController#search_brand_or_name as */*
 Completed 200 OK in 1235ms (Views: 385.6ms | ActiveRecord: 843.9ms | Allocations: 350596)
 
 
+Started GET "/users" for ::1 at 2019-12-07 16:47:52 -0800
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1[0m  [["name", "Genevieve"]]
+[active_model_serializers]   ↳ app/models/user.rb:9:in `user_ingredients'
+Started GET "/user_products/users/1" for ::1 at 2019-12-07 16:47:53 -0800
+[active_model_serializers]   [1m[36mUserProduct Load (1.0ms)[0m  [1m[34mSELECT "user_products".* FROM "user_products" WHERE "user_products"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:12:in `map'
+Processing by UserProductsController#user_reviews as */*
+[active_model_serializers]   [1m[36mProduct Load (4.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Parameters: {"user_id"=>"1"}
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+[active_model_serializers]   [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+  [1m[36mUserProduct Load (1.5ms)[0m  [1m[34mSELECT "user_products".* FROM "user_products" WHERE "user_products"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/user_products_controller.rb:39:in `map'
+[active_model_serializers]   [1m[36mProduct Load (3.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+[active_model_serializers]   [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+[active_model_serializers]   [1m[36mProduct Load (3.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+[active_model_serializers]   [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+  [1m[36mProduct Load (2.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+[active_model_serializers]   [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+[active_model_serializers]   [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 375], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+[active_model_serializers]   [1m[36mProduct Load (7.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 375], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.61ms)
+Completed 200 OK in 136ms (Views: 7.2ms | ActiveRecord: 40.0ms | Allocations: 24765)
+
+
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+[active_model_serializers]   [1m[36mCACHE UserProduct Load (0.0ms)[0m  [1m[34mSELECT "user_products".* FROM "user_products" WHERE "user_products"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mIngredient Load (42.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mIngredient Load (25.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mIngredient Load (27.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mIngredient Load (76.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mIngredient Load (28.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mIngredient Load (50.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 9]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mIngredient Load (31.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mIngredient Load (32.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:3:in `index'
+[active_model_serializers]   [1m[36mIngredient Load (37.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 375]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:3:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (741.77ms)
+Completed 200 OK in 820ms (Views: 356.9ms | ActiveRecord: 448.1ms | Allocations: 98730)
+
+
+Started GET "/users/1" for ::1 at 2019-12-07 16:47:58 -0800
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1[0m  [["name", "Genevieve"]]
+[active_model_serializers]   ↳ app/models/user.rb:9:in `user_ingredients'
+[active_model_serializers]   [1m[36mUserProduct Load (2.1ms)[0m  [1m[34mSELECT "user_products".* FROM "user_products" WHERE "user_products"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:12:in `map'
+[active_model_serializers]   [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+[active_model_serializers]   [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+[active_model_serializers]   [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+[active_model_serializers]   [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+[active_model_serializers]   [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+[active_model_serializers]   [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+[active_model_serializers]   [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+[active_model_serializers]   [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+[active_model_serializers]   [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 375], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:17:in `block in user_ingredients'
+[active_model_serializers]   [1m[36mCACHE UserProduct Load (0.0ms)[0m  [1m[34mSELECT "user_products".* FROM "user_products" WHERE "user_products"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mIngredient Load (24.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mIngredient Load (17.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mIngredient Load (20.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mIngredient Load (13.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mIngredient Load (12.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mIngredient Load (22.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 9]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mIngredient Load (13.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mIngredient Load (11.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mIngredient Load (19.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 375]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (266.43ms)
+Completed 200 OK in 274ms (Views: 102.9ms | ActiveRecord: 166.0ms | Allocations: 46598)
+
+
+Started GET "/productsearch?search=honey&category=Moisturizer+Cleanser" for ::1 at 2019-12-07 16:48:21 -0800
+Processing by ProductsController#search_brand_or_name as */*
+  Parameters: {"search"=>"honey", "category"=>"Moisturizer Cleanser"}
+  [1m[36mProduct Load (101.1ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC[0m  [["category", "Moisturizer"]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+  [1m[36mProduct Load (29.8ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC[0m  [["category", "Cleanser"]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (12.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1021]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1022]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1024]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1026]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1028]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1032]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1033]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1042]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1380]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (140.43ms)
+Completed 200 OK in 280ms (Views: 42.2ms | ActiveRecord: 231.4ms | Allocations: 42943)
+
+
+Started GET "/productsearch?search=ap&category=Moisturizer" for ::1 at 2019-12-07 16:56:47 -0800
+Processing by ProductsController#search_brand_or_name as */*
+  Parameters: {"search"=>"ap", "category"=>"Moisturizer"}
+  [1m[36mProduct Load (195.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'ap' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'ap' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('ap') || ' '''))) OR (similarity('ap', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:52:in `search_brand_or_name'
+  [1m[36mProduct Load (38.7ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'ap' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'ap' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('ap') || ' '''))) OR (similarity('ap', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $2[0m  [["category", "Moisturizer"], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:77:in `sort_by'
+[active_model_serializers]   [1m[36mIngredient Load (11.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 270]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:117:in `search_brand_or_name'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.37ms)
+Completed 200 OK in 274ms (Views: 14.4ms | ActiveRecord: 245.8ms | Allocations: 20573)
+
+
+Started GET "/user_products/users/1" for ::1 at 2019-12-08 17:27:17 -0800
+Processing by UserProductsController#user_reviews as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUserProduct Load (19.2ms)[0m  [1m[34mSELECT "user_products".* FROM "user_products" WHERE "user_products"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/user_products_controller.rb:39:in `map'
+  [1m[36mProduct Load (13.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 375], ["LIMIT", 1]]
+  ↳ app/controllers/user_products_controller.rb:40:in `block in user_reviews'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.07ms)
+Completed 200 OK in 142ms (Views: 4.1ms | ActiveRecord: 35.1ms | Allocations: 26589)
+
+
+Started GET "/productsearch?search=honey" for ::1 at 2019-12-08 17:27:24 -0800
+Processing by ProductsController#search_brand_or_name as */*
+  Parameters: {"search"=>"honey"}
+  [1m[36mProduct Load (295.5ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC[0m
+  ↳ app/controllers/products_controller.rb:78:in `sort_by'
+[active_model_serializers]   [1m[36mIngredient Load (26.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 9]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (9.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 397]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (9.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 437]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 513]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (19.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 537]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (12.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 690]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 828]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1020]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1021]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1022]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1023]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1024]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1025]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1026]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1027]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1028]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1029]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1030]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (12.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1031]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1032]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1033]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1034]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1035]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1036]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1042]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1059]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1060]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1380]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1505]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1558]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (12.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1597]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (12.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1628]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (12.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1669]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1825]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (651.26ms)
+Completed 200 OK in 954ms (Views: 257.1ms | ActiveRecord: 692.3ms | Allocations: 147463)
+
+
+Started GET "/productsearch?search=honey&category=Mist+Moisturizer+Mask" for ::1 at 2019-12-08 17:29:55 -0800
+Processing by ProductsController#search_brand_or_name as */*
+  Parameters: {"search"=>"honey", "category"=>"Mist Moisturizer Mask"}
+  [1m[36mProduct Load (5.5ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $2[0m  [["category", "Mist"], ["LIMIT", 500]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+  [1m[36mProduct Load (37.7ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $2[0m  [["category", "Moisturizer"], ["LIMIT", 500]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+  [1m[36mProduct Load (22.9ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $2[0m  [["category", "Mask"], ["LIMIT", 500]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 437]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 513]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 537]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 690]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1021]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1022]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1027]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1032]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1033]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1042]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1505]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1558]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1597]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1669]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1825]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (246.79ms)
+Completed 200 OK in 354ms (Views: 79.1ms | ActiveRecord: 257.4ms | Allocations: 78881)
+
+
+Started GET "/productsearch?search=honey&category=Mist+Moisturizer+Mask+Cleanser+Eye+Lip+Sunscreen+Toner+Treatment+Misc" for ::1 at 2019-12-08 17:30:09 -0800
+Processing by ProductsController#search_brand_or_name as */*
+  Parameters: {"search"=>"honey", "category"=>"Mist Moisturizer Mask Cleanser Eye Lip Sunscreen Toner Treatment Misc"}
+  [1m[36mProduct Load (4.0ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $2[0m  [["category", "Mist"], ["LIMIT", 500]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+  [1m[36mProduct Load (39.9ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $2[0m  [["category", "Moisturizer"], ["LIMIT", 500]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+  [1m[36mProduct Load (25.6ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $2[0m  [["category", "Mask"], ["LIMIT", 500]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+  [1m[36mProduct Load (30.5ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $2[0m  [["category", "Cleanser"], ["LIMIT", 500]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+  [1m[36mProduct Load (2.9ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $2[0m  [["category", "Eye Care"], ["LIMIT", 500]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+  [1m[36mProduct Load (5.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $2[0m  [["category", "Lip Care"], ["LIMIT", 500]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+  [1m[36mProduct Load (17.6ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $2[0m  [["category", "Sunscreen"], ["LIMIT", 500]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+  [1m[36mProduct Load (11.9ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $2[0m  [["category", "Toner"], ["LIMIT", 500]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+  [1m[36mProduct Load (46.4ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $2[0m  [["category", "Treatment"], ["LIMIT", 500]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+  [1m[36mProduct Load (44.5ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN (SELECT "products"."id" AS pg_search_id, (ts_rank((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))), (to_tsquery('english', ''' ' || 'honey' || ' ''')), 0)) AS rank FROM "products" WHERE ((to_tsvector('english', coalesce("products"."brand"::text, '')) || to_tsvector('english', coalesce("products"."name"::text, ''))) @@ (to_tsquery('english', ''' ' || 'honey' || ' '''))) OR ((to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."brand"::text, ''))) || to_tsvector('simple', pg_search_dmetaphone(coalesce("products"."name"::text, '')))) @@ (to_tsquery('simple', ''' ' || pg_search_dmetaphone('honey') || ' '''))) OR (similarity('honey', (coalesce("products"."brand"::text, '') || ' ' || coalesce("products"."name"::text, ''))) >= 0.3)) AS pg_search_0a3e27b8ca818264d75c8d ON "products"."id" = pg_search_0a3e27b8ca818264d75c8d.pg_search_id WHERE "products"."category" = $1 ORDER BY pg_search_0a3e27b8ca818264d75c8d.rank DESC, "products"."id" ASC LIMIT $2[0m  [["category", "Misc"], ["LIMIT", 500]]
+  ↳ app/controllers/products_controller.rb:67:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 397]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (14.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 437]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 513]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 537]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 690]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 828]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1020]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1021]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1022]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (10.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1023]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1024]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1025]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1026]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1027]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1028]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (12.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1029]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.8ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1030]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1031]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1032]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1033]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1034]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1035]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1036]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1042]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1059]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1060]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1380]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1505]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1558]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1597]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1628]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1669]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers]   [1m[36mIngredient Load (11.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "product_ingredients" ON "ingredients"."id" = "product_ingredients"."ingredient_id" WHERE "product_ingredients"."product_id" = $1[0m  [["product_id", 1825]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:112:in `search_brand_or_name'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (523.37ms)
+Completed 200 OK in 769ms (Views: 148.9ms | ActiveRecord: 604.4ms | Allocations: 144424)
+
+
