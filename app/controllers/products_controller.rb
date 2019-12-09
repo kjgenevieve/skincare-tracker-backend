@@ -27,9 +27,9 @@ class ProductsController < ApplicationController
             # results = Product.all.sort_by(&:updated_at)
             # results = results.first(50)
 
-            ## Both userInput (:search) && categories (:category) were passed via url
-        elsif params[:search] != "undefined" && params[:search] != "" && params[:category] != "" && params[:category] != nil
             
+        elsif params[:search] != "undefined" && params[:search] != "" && params[:category] != "" && params[:category] != nil
+            ## Both userInput (:search) && categories (:category) were passed via url
             
         # This block was used for debugging!
             # if params[:category] == "undefined"
@@ -48,7 +48,7 @@ class ProductsController < ApplicationController
 
 
             
-            user_input_results = Product.search_by_brand_or_name(params[:search])
+            user_input_results = Product.search_by_brand_or_name(params[:search]).limit(500)
 
             categories_ary = params[:category].split(' ')
 
@@ -74,9 +74,9 @@ class ProductsController < ApplicationController
         
         elsif params[:search] != "undefined" && params[:search] != ""
             # Hits if only :search was passed and not :category
-            results = Product.search_by_brand_or_name(params[:search])
+            results = Product.search_by_brand_or_name(params[:search]).limit(75)
             results = results.sort_by(&:updated_at)
-            results = results.first(75)
+            # results = results.first(75)
         
         elsif params[:category]
             # Hits if only :category was passed and not :search
@@ -91,11 +91,11 @@ class ProductsController < ApplicationController
             end
 
             if categories_ary.length == 1
-                results = Product.all.where(category: categories_ary)
+                results = Product.all.where(category: categories_ary).limit(75)
             elsif categories_ary.length > 1
                 i = 0
                 while i < categories_ary.length
-                    results = results + Product.all.where(category: categories_ary[i])
+                    results = results + Product.all.where(category: categories_ary[i]).limit(50)
                     i += 1
                 end
             end
